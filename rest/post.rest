@@ -1,0 +1,98 @@
+POST http://localhost:8787/location/create
+content-type: application/json
+
+{
+    "location": "Bogor",
+    "imgLocation": "https://www.bogorraincake.com/wp-content/uploads/2018/01/Tugu-Kujang-1024x746.jpg"
+}
+
+# 
+
+###
+
+POST http://localhost:8787/location/create
+content-type: application/json
+
+{
+    "location": "Jakarta",
+    "imgLocation": "https://img.jakpost.net/c/2017/12/24/2017_12_24_37849_1514123622._large.jpg"
+},
+{
+    "location": "Tangerang",
+    "imgLocation": "http://mobile.rilis.id/timthumb.php?src=http://cdn.rilis.id/2018/11/05/20181105043123kota_tangerang.jpg&w=800&h=600&zc=3"
+},
+{
+    "location": "Bandung",
+    "imgLocation": "https://wisatabaru.com/wp-content/uploads/2018/01/gedung-sate-bandung.jpg"
+},
+{
+    "location": "Depok",
+    "imgLocation": "https://awsimages.detik.net.id/customthumb/2018/05/21/1025/img_20180521164949_5b02963d56c3a.jpg?w=600&q=90"
+},
+{
+    "location": "Bogor",
+    "imgLocation": "https://www.bogorraincake.com/wp-content/uploads/2018/01/Tugu-Kujang-1024x746.jpg"
+}
+
+# 
+
+###
+
+
+POST http://localhost:8787/event/create
+content-type: application/json
+
+{
+    "title" : "Bon Iver - 2020 Tour Jakarta — Ismaya Live",
+    "startTime" : "2020-01-19 18:00:00",
+    "endTime": "2020-01-19 21:00:00",
+    "description": "Announcing the Jakarta leg of Bon Iver’s 2020 Asia tour to kick off the new decade on 19 January 2020 at Tennis Indoor Senayan, Jakarta! After 2 Grammy Awards, sold out tours and the acclaimed release of their 4th studio album 'i,i', the Wisconsin-based band is now set to deliver a performance full of glorious sounds to wash over you — for the first time in Indonesia. This is strictly an 18+ event.",
+    "locationId": "1",
+    "address": "Tennis Indoor Senayan, Jakarta, Indonesia",
+    "img": "https://livemusicblog-wpengine.netdna-ssl.com/wp-content/uploads/2019/09/bon-iver-asia-europe-scandanavia-2020-tour-dates.png"
+}
+
+# 
+
+###
+
+POST http://localhost:8787/event/ticket/create
+content-type: application/json
+
+{
+    "eventId": "1",
+    "ticketType": "VVIP",
+    "quantity": "100",
+    "price": "750000"
+}
+
+# 
+
+###
+
+POST http://localhost:8787/transaction/purchase
+content-type: application/json
+
+{
+    "eventId": "1",
+    "buyerName": "Nurdin",
+    "hasBeenPaid": "0"
+}
+
+
+# 
+
+###
+POST http://localhost:8787/transaction/buy_ticket
+content-type: application/json
+
+{
+    "eventId": "1",
+    "purchaseId": "2",
+    "availableTicketId": "1",
+    "quantity": "5"
+}
+
+# 
+
+###

@@ -1,0 +1,30 @@
+GET http://localhost:8787/locations
+# WORKS
+
+###
+
+GET http://localhost:8787/event/get_info
+# WORKS
+
+###
+
+GET http://localhost:8787/event/get_available_tickets_info
+# WORKS
+
+###
+
+GET http://localhost:8787/transaction/get_info
+# WORKS
+
+###
+
+GET http://localhost:8787/transaction/all_purchases
+# WORKS
+
+###
+
+GET http://localhost:8787/location/1
+# WORKS
+
+###
+

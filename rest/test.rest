@@ -1,0 +1,75 @@
+POST http://localhost:8787/event
+content-type: application/json
+
+{
+    "title" : "Youtube Playlist Concert",
+    "categoryId" : "3",
+    "startDate": "2019-12-30",
+    "endDate": "2019-12-30", 
+    "startTime": "12:00",
+    "endTime" : "18:00",
+    "price" : "200000",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis commodo hendrerit. Nullam mattis massa est, a luctus nisi sodales vitae. Phasellus nec turpis eu magna dictum gravida. Mauris non eros leo. Cras nec consectetur felis, feugiat placerat lacus. In iaculis nisi tempor scelerisque aliquet. Fusce facilisis sagittis gravida. Duis consectetur vulputate eleifend. Morbi accumsan luctus viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed consectetur vitae eros vitae consequat. Nullam dictum eu dolor vitae aliquam. Suspendisse dictum lectus vel leo lobortis, vitae imperdiet velit tincidunt. Vivamus scelerisque nunc ac rhoncus gravida. Nunc ligula tortor, accumsan ut mi sit amet, ultrices tempor nibh. Mauris quis augue sagittis, pulvinar lacus sed, ultrices eros. Suspendisse vulputate urna eget nisi luctus bibendum. Phasellus ac mollis dolor, nec rhoncus mi. Donec tincidunt arcu in ex sagittis vehicula. Sed imperdiet ullamcorper justo, sed posuere ex aliquam nec. Quisque hendrerit facilisis leo in tincidunt. Praesent volutpat pretium magna, at ultricies mi fringilla ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed elit ante, hendrerit vel ligula nec, condimentum mattis velit. Pellentesque diam augue, pulvinar nec neque et, maximus scelerisque justo.",
+    "address": "Jl. Raya Bogor, No.34, Cimanggis, Depok",
+    "urlMaps": "https://www.google.com/maps/@-6.2238681,106.6536147,15z",
+    "img": "http://www.aljanh.net/data/archive/img/1556902389.jpeg",
+    "createdBy" : "3",
+    "imgHostedBy" : "http://www.aljanh.net/data/archive/img/1556902389.jpeg",
+    "hostedBy": "https://pbs.twimg.com/profile_images/907841303278505990/3Si5MURi.jpg"
+}
+
+# 
+
+###
+
+POST http://localhost:8787/category
+content-type: application/json
+
+{
+    "name": "Myth",
+    "imgCategory": "http://www.aljanh.net/data/archive/img/1556902389.jpeg"
+}
+
+# 
+
+###
+POST http://localhost:8787/order
+content-type: application/json
+
+{
+    "eventId": "1",
+    "userId": "1",
+    "quantity": "1",
+    "price": "300000",
+    "status": "confirmed"
+
+}
+
+# 
+
+###
+POST http://localhost:8787/
+content-type: application/json
+
+{
+    "username": "sample",
+    "password": "1234"
+}
+
+# 
+
+###
+POST http://localhost:8787/
+content-type: application/json
+
+{
+    "user_id": "1234",
+    "event_id": "sample",
+    "quantity": "1",
+    "total_price": "300000",
+
+}
+
+# 
+
+###
