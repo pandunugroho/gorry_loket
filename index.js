@@ -41,7 +41,7 @@ app.group('', (router) => {
     router.get('/event/get_info', eventsController.getInfo)
     router.get('/transaction/get_info', purchasesController.getInfo)
     
-    // //POST
+    //POST
 
     router.post('/event/create', eventsController.createEvent)
     router.post('/location/create', locationsController.createLocation)

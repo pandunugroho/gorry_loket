@@ -6,24 +6,9 @@ const AvailableTickets = models.availableTickets;
 
 exports.getInfo = (req, res) => {
   Events.findAll({
-    attributes: {
-      exclude: ["createdAt", "updatedAt"]
-    },
     include: [
-      {
-        model: Locations,
-        // as: "locations",
-        attributes: {
-          exclude: ["createdAt", "updatedAt"]
-        },
-      },
-      {
-        model: AvailableTickets,
-        // as: "availableTicket",
-        attributes: {
-          exclude: ["createdAt", "updatedAt"]
-        },
-      }
+      { model: Locations },
+      { model: AvailableTickets }
     ]
   })
     .then(data => {

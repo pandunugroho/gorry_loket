@@ -3,17 +3,12 @@ const Locations = models.locations;
 
 //to show all registered locations
 exports.allLocations = (req, res) => {
-  Locations.findAll({
-    attributes: {
-      exclude: ["createdAt", "updatedAt"]
-    },
-  })
+  Locations.findAll()
     .then(data => {
       res.send(data)
     })
 };
 
-//to 
 exports.oneLocation = (req, res) => {
   Locations.findOne({
     where: { id: req.params.id }
