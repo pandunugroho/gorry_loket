@@ -53,7 +53,7 @@ Postman are a GUI used for interacting with our server. For now, we can setting 
 In this server, there are two methods that we can use, _GET_ and _POST_. 
 The main URL used for request URL is `localhost:8787` + relative path provided in this server. 
 Then, for request body, you can use examples provided in folder "rest" for _POST_ method in post.rest file. You can see the list of end-point used in this server in table below. 
-_(note: by using Virtual Studio Code and REST Client Extension/Plugin, you can easily run GET and POST methods from file get.rest and post.rest. Also, you can get the full list of endpoint in this server)_
+_(note: by using Visual Studio Code and REST Client Extension/Plugin, you can easily run GET and POST methods from file get.rest and post.rest. Also, you can get the full list of endpoint in this server)_
 
 Endpoint | Relative Path | Method | Description
 --- | --- | --- | ---
